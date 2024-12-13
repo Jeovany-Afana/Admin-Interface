@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Admin</title>
+</head>
+<body>
+
+    <div class="logo">
+        <h1>CAMPUS <span>INSPECT</span></h1>
+    </div>
+
+
+    <!-- Utiliser la caméra pour scanner un QR CODE -->
+
+<div title="Scanner le code QR" id="scan-container">
+    <!-- Bouton pour démarrer le scanner avec l'icône de la caméra -->
+
+  <a class="camera-button" id="startScanButton">
+    <i class="fas fa-camera"></i>
+  </a>
+</div>
+  <!-- L'overlay pour afficher la vidéo avec le bouton de fermeture -->
+<div id="videoOverlay">
+    <!-- Bouton de fermeture de l'overlay -->
+    <button id="closeButton">X</button>
+
+    <!-- Élément vidéo qui affiche le flux de la caméra -->
+    <video id="preview" style="display: block;"></video>
+
+    <!-- Contenu du QR Code trouvé (initialement vide) -->
+    <div id="qrCodeContent" style="display: none;"></div>
+</div>
+
+
+<!-- Inclusion de la bibliothèque jsQR depuis un CDN -->
+<script src="https://unpkg.com/jsqr"></script>
+ <script type="module" src="./index.js"></script>
+</body>
+</html>

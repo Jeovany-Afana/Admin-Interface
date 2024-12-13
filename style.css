@@ -1,0 +1,150 @@
+
+
+/* Styles pour le bouton de la caméra */
+.camera-button {
+    background: none;
+     color: #007BFF; /* Couleur du texte */
+     border: none; /* Pas de bordure */
+     border-radius: 25px; /* Coins arrondis */
+     padding: 10px 20px; /* Espacement interne */
+     font-size: 4rem; /* Taille du texte */
+     font-family: Arial, sans-serif; /* Police moderne */
+     cursor: pointer; /* Curseur en mode clic */
+     transition: background-color 0.3s ease, transform 0.2s ease; /* Effet de transition */
+   }
+   
+   .camera-button i {
+     font-size: 20px; /* Taille de l'icône */
+   }
+   
+   /* Effets au survol */
+   .camera-button:hover {
+     background-color: #003d80; /* Couleur plus foncée au survol */
+     transform: scale(1.05); /* Léger agrandissement */
+   }
+   
+   /* Réduction pour les petits écrans */
+   @media (max-width: 768px) {
+     .camera-button {
+       font-size: 3rem; /* Taille du texte réduite */
+       padding: 8px 16px; /* Espacement réduit */
+     }
+   
+     .camera-button i {
+       font-size: 3rem; /* Taille de l'icône ajustée */
+     }
+   }
+
+
+
+    /* Styles pour l'overlay (modale) qui va apparaître au-dessus des autres éléments */
+ #videoOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    display: none; /* Caché au début */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Place l'overlay au-dessus de tout le contenu */
+}
+
+/* Styles pour l'élément vidéo dans l'overlay */
+#preview {
+    max-width: 80%; /* Limite la taille de la vidéo */
+    max-height: 80%;
+    border: 1px solid white;
+}
+
+/* Style pour le bouton de fermeture */
+#closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+/*Style du bouton de démarrage*/
+#startScanButton {
+    border: none;
+    width: 5.6%;
+    height: 6%;
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Styles pour le contenu du QR Code trouvé */
+#qrCodeContent {
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+}
+
+
+
+   
+   .logo {
+    text-align: center; /* Centrer le texte */
+    /* margin: 100px 0; Marges autour du logo */
+}
+
+.logo h1 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 4em; /* Taille de la police */
+    font-weight: bold; /* Gras */
+    color: #007BFF; /* Couleur principale */
+    text-transform: uppercase; /* Mettre en majuscules */
+    letter-spacing: 5px; /* Espacement entre les lettres */
+    position: relative; /* Position pour les effets */
+    display: inline-block; /* Pour le positionnement */
+    background: linear-gradient(90deg, #007BFF, #00CFFF); /* Dégradé bleu */
+    -webkit-background-clip: text; /* Clipping pour dégradé de texte */
+    -webkit-text-fill-color: transparent; /* Remplissage transparent */
+    transition: all 0.3s ease; /* Transition douce pour tous les effets */
+}
+
+/* Effet de survol */
+.logo h1:hover {
+    transform: scale(1.1); /* Agrandissement au survol */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4); /* Ombre au survol */
+}
+
+/* Style pour le mot "INSPECT" */
+.logo h1 span {
+    color: #FF6347; /* Couleur différente pour INSPECT */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombre pour effet 3D */
+    position: relative; /* Pour l'effet de soulignement */
+}
+
+/* Effet de soulignement sur "INSPECT" */
+.logo h1 span::after {
+    content: ""; /* Contenu vide pour créer l'effet */
+    display: block; /* Affichage en bloc */
+    width: 100%; /* Largeur pleine */
+    height: 5px; /* Hauteur de la ligne */
+    background: #FF6347; /* Couleur de la ligne */
+    position: absolute; /* Position absolue */
+    bottom: -10px; /* Position en dessous du texte */
+    left: 0; /* À gauche */
+    transform: scaleX(0); /* Réduire à 0 pour commencer */
+    transition: transform 0.3s ease; /* Transition douce */
+}
+
+/* Révéler le soulignement au survol */
+.logo h1 span:hover::after {
+    transform: scaleX(1); /* Agrandir à 100% */
+}
+
+
+
+
+
