@@ -148,12 +148,13 @@ const firebaseConfig = {
 
                 // Étape 3 : Ajoute un nouveau scan dans la collection "scans"
                 await addDoc(scansCollection, {
+                    uid: userDoc.uid,
                     pseudoOk: userDoc.pseudoOk || "Inconnu", // Définit des valeurs par défaut si certaines données manquent
                     kairos: userDoc.kairos || "Non défini",
                     classe: userDoc.classe || "Non spécifié",
                     dureeSolvabilite: userDoc.dureeSolvabilite || 0,
                     a_jour: userDoc.a_jour || false,
-                    date: aujourdHui, // Date simplifiée (sans heure)
+                    date: new Date().toISOString().split("T")[0], // Date simplifiée (sans heure)
                     timestamp: maintenant.toISOString(), // Timestamp précis incluant l'heure
                 });
 
