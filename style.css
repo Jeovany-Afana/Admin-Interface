@@ -1,13 +1,16 @@
 
 
 /* Styles pour le bouton de la caméra */
+body{
+  display: block;
+}
 .camera-button {
     background: none;
      color: #007BFF; /* Couleur du texte */
      border: none; /* Pas de bordure */
      border-radius: 25px; /* Coins arrondis */
      padding: 10px 20px; /* Espacement interne */
-     font-size: 4rem; /* Taille du texte */
+     font-size: 10rem; /* Taille du texte */
      font-family: Arial, sans-serif; /* Police moderne */
      cursor: pointer; /* Curseur en mode clic */
      transition: background-color 0.3s ease, transform 0.2s ease; /* Effet de transition */
@@ -72,15 +75,21 @@
     border-radius: 50%;
 }
 
+
+.scan-container{
+  margin: 0 auto;
+}
+
+
 /*Style du bouton de démarrage*/
-#startScanButton {
+/* #startScanButton {
     border: none;
     width: 5.6%;
     height: 6%;
-    font-size: 20px;
+    font-size: 3rem;
     padding: 10px 20px;
     cursor: pointer;
-}
+} */
 
 /* Styles pour le contenu du QR Code trouvé */
 #qrCodeContent {

@@ -8,6 +8,7 @@ import {
     addDoc,
     doc, // Importation ajoutée
     getDoc, // Importation ajoutée
+    serverTimestamp, // Importation ajoutée
   } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js";
   
   import {
@@ -155,7 +156,7 @@ const firebaseConfig = {
                     dureeSolvabilite: userDoc.dureeSolvabilite || 0,
                     a_jour: userDoc.a_jour || false,
                     date: new Date().toISOString().split("T")[0], // Date simplifiée (sans heure)
-                    timestamp: maintenant.toISOString(), // Timestamp précis incluant l'heure
+                    timestamp: serverTimestamp(), // Horodatage du serveur Firestore
                 });
 
                 // Confirme que le scan a été effectué avec succès
