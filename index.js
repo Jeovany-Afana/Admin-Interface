@@ -154,7 +154,7 @@ const firebaseConfig = {
                     kairos: userDoc.kairos || "Non défini",
                     classe: userDoc.classe || "Non spécifié",
                     dureeSolvabilite: userDoc.dureeSolvabilite || 0,
-                    derogationDate: user.derogationDate || null,
+                    derogationDate: userDoc.derogationDate || null,
                     derogation: userDoc.derogation || false,
                     a_jour: userDoc.a_jour || false,
                     date: new Date().toISOString().split("T")[0], // Date simplifiée (sans heure)
